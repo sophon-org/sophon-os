@@ -23,7 +23,22 @@ const altehaasGrotesk = localFont({
 
 export const metadata: Metadata = {
 	title: 'Sophon',
-	description: 'A Breath of Fresh Air'
+	description: 'A Breath of Fresh Air',
+	openGraph: {
+		title: 'Sophon',
+		description: 'A Breath of Fresh Air',
+		url: 'https://sophon.xyz',
+		siteName: 'Sophon',
+		images: [
+			{
+				url: 'https://sophon-fresh-air-git-main.builtby.dad/og.png', // Must be an absolute URL
+				width: 1200,
+				height: 600
+			}
+		],
+		locale: 'en_US',
+		type: 'website'
+	}
 };
 
 export default function RootLayout(

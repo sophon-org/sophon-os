@@ -21,7 +21,7 @@ export function MainSubscribeBanner(): ReactElement {
 					</h3>
 					<div>
 						<button
-							onClick={() => document.getElementById('trigger-whitelist-modal')?.click()}
+							onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}
 							className={'button-regular'}>
 							{'Join Waitlist'}
 						</button>
@@ -96,7 +96,7 @@ export function MainSubscribeBanner(): ReactElement {
 					</h3>
 					<div className={'w-full'}>
 						<button
-							onClick={() => document.getElementById('trigger-whitelist-modal')?.click()}
+							onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}
 							className={'button-regular w-full'}>
 							{'Join Waitlist'}
 						</button>

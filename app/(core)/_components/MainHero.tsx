@@ -30,7 +30,7 @@ export function MainHero(): ReactElement {
 
 			<div className={'pt-10 max-md:w-full'}>
 				<button
-					onClick={() => document.getElementById('trigger-whitelist-modal')?.click()}
+					onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}
 					className={'button-glass max-md:w-full'}>
 					{'Join Waitlist'}
 				</button>
