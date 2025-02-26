@@ -52,7 +52,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 				},
 				properties: {
 					// Assuming the column name is "email" in your Notion database
-					email: {
+					Email: {
 						type: 'title',
 						title: [
 							{
