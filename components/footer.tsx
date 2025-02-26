@@ -9,7 +9,10 @@ export default function Footer(): ReactElement {
 	return (
 		<footer
 			className={'relative z-50 mt-[200px] w-screen bg-white px-4 pt-32 mix-blend-multiply md:mt-[46px] md:px-0'}>
-			<div className={'absolute inset-x-0 bottom-[96%] flex w-full flex-row justify-center overflow-x-clip'}>
+			<div
+				className={
+					'pointer-events-none absolute inset-x-0 bottom-[96%] flex w-full flex-row justify-center overflow-x-clip'
+				}>
 				<Image
 					src={'/bigLeftCloud.png?v=2'}
 					alt={''}

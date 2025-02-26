@@ -28,7 +28,7 @@ export function MainSubscribeBanner(): ReactElement {
 					</div>
 				</div>
 
-				<div className={'absolute inset-0'}>
+				<div className={'pointer-events-none absolute inset-0'}>
 					<div>
 						<Image
 							src={'/pearlBanners/topLeft.png'}

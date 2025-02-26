@@ -17,14 +17,14 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 	return (
 		<Fragment>
 			<div className={'flex flex-col items-center px-6 pb-10'}>
-				<div className={'px-14'}>
+				<div className={'mx-14 size-[200px]'}>
 					<Lottie
 						animationData={lottieSuccess}
 						loop={true}
 						autoplay={true}
 						width={200}
 						height={200}
-						className={'size-[200px]'}
+						className={'aspect-square size-[200px]'}
 					/>
 				</div>
 				<p
