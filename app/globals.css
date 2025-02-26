@@ -90,10 +90,9 @@ body {
 	max-width: unset;
 }
 
-body:has(#splash-in) {
+body:has(#whitelist-modal-open) {
 	overflow: hidden;
 }
-
-body:has(#splash-out) {
-	overflow: auto;
+body:has(#splash-in) {
+	overflow: hidden;
 }

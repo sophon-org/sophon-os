@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import {Logo} from './logo';
@@ -6,14 +7,34 @@ import type {ReactElement} from 'react';
 
 export default function Footer(): ReactElement {
 	return (
-		<footer className={'relative z-50 mt-[46px] w-screen bg-white px-4 pt-32 mix-blend-multiply md:px-0'}>
+		<footer
+			className={'relative z-50 mt-[200px] w-screen bg-white px-4 pt-32 mix-blend-multiply md:mt-[46px] md:px-0'}>
+			<div className={'absolute inset-x-0 bottom-[96%] flex w-full flex-row justify-center overflow-x-clip'}>
+				<Image
+					src={'/bigLeftCloud.png?v=2'}
+					alt={''}
+					className={'-mr-10 md:-mb-16'}
+					quality={90}
+					width={1960}
+					height={1098}
+				/>
+				<Image
+					src={'/bigRightCloud.png?v=2'}
+					alt={''}
+					className={'-ml-10 md:-mb-16'}
+					quality={90}
+					width={2023}
+					height={1133}
+				/>
+			</div>
+
 			<div className={'mx-auto flex max-w-[1200px] flex-wrap gap-x-16 lg:gap-x-[78px]'}>
 				<div className={'grid grid-cols-2 gap-10 md:grid-cols-4'}>
 					<div className={'hidden md:block'}>
 						<Logo />
 					</div>
 
-					<div>
+					<div className={'text-left'}>
 						<h3 className={'text-[30px] leading-[30px] tracking-[-0.03em] text-black/40'}>{'Company'}</h3>
 						<ul className={'mt-2.5 space-y-2'}>
 							<li>
@@ -54,7 +75,7 @@ export default function Footer(): ReactElement {
 						</ul>
 					</div>
 
-					<div>
+					<div className={'text-left'}>
 						<h3 className={'text-[30px] leading-[30px] tracking-[-0.03em] text-black/40'}>{'Products'}</h3>
 						<ul className={'mt-2.5 space-y-2'}>
 							<li>
@@ -88,7 +109,7 @@ export default function Footer(): ReactElement {
 						</ul>
 					</div>
 
-					<div>
+					<div className={'text-left'}>
 						<h3 className={'text-[30px] leading-[30px] tracking-[-0.03em] text-black/40'}>
 							{'Developers'}
 						</h3>

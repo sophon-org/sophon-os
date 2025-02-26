@@ -354,9 +354,7 @@ function CloudsComponent(): ReactElement {
 			const layerRect = layer.getBoundingClientRect();
 			const layerX = layerRect.left;
 
-			if (layerX > worldBounds.width) {
-				// console.log(layer.data.x, layerX);
-				// layer.data.x = -randomBetween(worldBounds.width, 0);
+			if (layerX > worldBounds.width * 1.5) {
 				layer.data.x = -worldBounds.width + Math.random() * (worldBounds.width * 0.3);
 				layer.data.y = randomBetween(-worldBounds.height, worldBounds.height);
 				layer.data.z = randomBetween(-worldBounds.depth / 2, worldBounds.depth / 2);

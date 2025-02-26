@@ -37,11 +37,11 @@ export default function RootLayout(
 		<html
 			lang={'en'}
 			className={'bg-white'}>
-			<body className={`${altehaasGrotesk.variable} relative antialiased`}>
+			<body className={`${altehaasGrotesk.variable} relative flex flex-col antialiased`}>
 				<main
 					className={'min-w-screen relative z-0 min-h-screen'}
 					style={{
-						background: 'linear-gradient(180deg, #3c8fcb 0%, #8edcff 100%)'
+						background: 'linear-gradient(180deg, #5CABE6 0%, #8EDCFF 100%)'
 					}}>
 					{children}
 				</main>
