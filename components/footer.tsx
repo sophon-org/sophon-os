@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import {cn} from '@/lib/utils';
+
 import {Logo} from './logo';
 
 import type {ReactElement} from 'react';
@@ -8,15 +10,18 @@ import type {ReactElement} from 'react';
 export default function Footer(): ReactElement {
 	return (
 		<footer
-			className={'relative z-50 mt-[200px] w-screen bg-white px-4 pt-32 mix-blend-multiply md:mt-[46px] md:px-0'}>
+			className={
+				'relative z-50 mt-[200px] w-screen bg-white px-4 pt-32 mix-blend-multiply md:mt-[46px] md:px-0 2xl:mt-[300px]'
+			}>
 			<div
-				className={
-					'pointer-events-none absolute inset-x-0 bottom-[96%] flex w-full flex-row justify-center overflow-x-clip'
-				}>
+				className={cn(
+					'pointer-events-none absolute inset-x-0 flex w-full flex-row justify-center overflow-x-clip',
+					'bottom-[90%] xl:bottom-[80%]'
+				)}>
 				<Image
 					src={'/bigLeftCloud.png?v=2'}
 					alt={''}
-					className={'-mr-10 md:-mb-16'}
+					className={'z-20 -mr-40 md:-mb-16'}
 					quality={90}
 					width={1960}
 					height={1098}
@@ -24,14 +29,14 @@ export default function Footer(): ReactElement {
 				<Image
 					src={'/bigRightCloud.png?v=2'}
 					alt={''}
-					className={'-ml-10 md:-mb-16'}
+					className={'z-10 -mr-20 md:-mb-16'}
 					quality={90}
 					width={2023}
 					height={1133}
 				/>
 			</div>
 
-			<div className={'mx-auto flex max-w-[1200px] flex-wrap gap-x-16 lg:gap-x-[78px]'}>
+			<div className={'mx-auto flex max-w-[1200px] flex-wrap gap-x-16 pt-20 lg:gap-x-[78px]'}>
 				<div className={'grid grid-cols-2 gap-10 md:grid-cols-4'}>
 					<div className={'hidden md:block'}>
 						<Logo />
