@@ -11,13 +11,13 @@ import type {ReactElement} from 'react';
 function ModalContent({handleClose}: {handleClose: () => void}): ReactElement {
 	const [step, setStep] = useState<'email' | 'success'>('email');
 
-	const handleEmailSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+	const handleEmailSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
 		event.preventDefault();
 		setStep('success');
 	};
 
 	const handleExploreClick = (): void => {
-		setStep('email');
+		handleClose();
 	};
 
 	return (
@@ -35,10 +35,10 @@ function ModalContent({handleClose}: {handleClose: () => void}): ReactElement {
 					<motion.div
 						key={'email-step'}
 						layout
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						exit={{opacity: 0}}
-						transition={{duration: 0.1}}
+						initial={{opacity: 0, filter: 'blur(20px)'}}
+						animate={{opacity: 1, filter: 'blur(0px)'}}
+						exit={{opacity: 0, filter: 'blur(20px)'}}
+						transition={{duration: 1}}
 						className={'flex w-full flex-col'}>
 						<WhitelistModalEmailStep handleEmailSubmit={handleEmailSubmit} />
 					</motion.div>
@@ -46,10 +46,10 @@ function ModalContent({handleClose}: {handleClose: () => void}): ReactElement {
 					<motion.div
 						key={'success-step'}
 						layout
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						exit={{opacity: 0}}
-						transition={{duration: 0.1}}
+						initial={{opacity: 0, filter: 'blur(20px)'}}
+						animate={{opacity: 1, filter: 'blur(0px)'}}
+						exit={{opacity: 0, filter: 'blur(20px)'}}
+						transition={{duration: 1}}
 						className={'flex w-full flex-col'}>
 						<WhitelistModalSuccessStep handleExploreClick={handleExploreClick} />
 					</motion.div>
