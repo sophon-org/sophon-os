@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 		siteName: 'Sophon OS',
 		images: [
 			{
-				url: 'https://app.sophon.xyz/og.png', // Must be an absolute URL
+				url: 'https://app.sophon.xyz/og.png',
 				width: 1200,
 				height: 600
 			}
