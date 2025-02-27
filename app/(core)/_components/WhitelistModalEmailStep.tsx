@@ -89,7 +89,7 @@ export function WhitelistModalEmailStep(props: {
 						'text-[32px] leading-[32px]',
 						'whitespace-break-spaces text-center pb-4'
 					)}>
-					{'Enter email to subscribe for early access to Sophon Home'}
+					{'Enter email to subscribe for early access to Sophon OS'}
 				</p>
 				<p
 					className={cn(

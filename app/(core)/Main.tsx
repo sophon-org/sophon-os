@@ -3,9 +3,6 @@
 import {Fragment} from 'react';
 
 import {MainAppPreview} from '@/app/(core)/_components/MainAppPreview';
-import {MainAppSophonAccount} from '@/app/(core)/_components/MainAppSophonAccount';
-import {MainAppSophonHome} from '@/app/(core)/_components/MainAppSophonHome';
-import {MainAppSophonPlus} from '@/app/(core)/_components/MainAppSophonPlus';
 import {MainHero} from '@/app/(core)/_components/MainHero';
 import {MainSubscribeBanner} from '@/app/(core)/_components/MainSubscribeBanner';
 import {WhitelistModal} from '@/app/(core)/_components/WhitelistModal';
@@ -26,14 +23,12 @@ export default function Main(): ReactElement {
 					transition: 'filter 1s ease-in-out, opacity 1.5s ease-in-out',
 					pointerEvents: isMainVisible ? 'auto' : 'none',
 					visibility: isMainVisible ? 'visible' : 'hidden',
-					opacity: isMainVisible ? 1 : 0
+					opacity: isMainVisible ? 1 : 0,
+					height: 'calc(100% - 200px)'
 				}}
 				className={'relative z-50 flex flex-col items-center pt-20 text-center max-md:px-6'}>
 				<MainHero />
 				<MainAppPreview />
-				<MainAppSophonHome />
-				<MainAppSophonAccount />
-				<MainAppSophonPlus />
 				<MainSubscribeBanner />
 				<Footer />
 			</div>

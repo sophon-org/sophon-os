@@ -18,7 +18,7 @@ export function MainSubscribeBanner(): ReactElement {
 							'text-[32px] leading-[36px]',
 							'whitespace-break-spaces text-center'
 						)}>
-						{'Subscribe for early access\nto Sophon Home'}
+						{'Subscribe for early access\nto Sophon OS'}
 					</h3>
 					<div>
 						<button
@@ -93,7 +93,7 @@ export function MainSubscribeBanner(): ReactElement {
 							'text-[48px] leading-[48px]',
 							'md:whitespace-break-spaces text-center'
 						)}>
-						{'Subscribe for early access\nto Sophon Home'}
+						{'Subscribe for early access\nto Sophon OS'}
 					</h3>
 					<div className={'w-full'}>
 						<button

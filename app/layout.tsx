@@ -22,16 +22,16 @@ const altehaasGrotesk = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Sophon',
+	title: 'Sophon OS',
 	description: 'A Breath of Fresh Air',
 	openGraph: {
-		title: 'Sophon',
+		title: 'Sophon OS',
 		description: 'A Breath of Fresh Air',
-		url: 'https://sophon.xyz',
-		siteName: 'Sophon',
+		url: 'https://app.sophon.xyz/',
+		siteName: 'Sophon OS',
 		images: [
 			{
-				url: 'https://sophon-fresh-air-git-main.builtby.dad/og.png', // Must be an absolute URL
+				url: 'https://app.sophon.xyz/og.png', // Must be an absolute URL
 				width: 1200,
 				height: 600
 			}
@@ -56,7 +56,7 @@ export default function RootLayout(
 				style={{
 					background: 'linear-gradient(180deg, #5CABE6 0%, #8EDCFF 100%)'
 				}}
-				className={`${altehaasGrotesk.variable} relative flex flex-col antialiased`}>
+				className={`${altehaasGrotesk.variable} antialiased`}>
 				<div
 					className={'pointer-events-none fixed inset-0 z-0 h-screen w-screen'}
 					style={{
@@ -67,7 +67,7 @@ export default function RootLayout(
 						backgroundBlendMode: 'overlay'
 					}}
 				/>
-				<main className={'min-w-screen relative z-0 min-h-screen'}>{children}</main>
+				{children}
 			</body>
 		</html>
 	);
