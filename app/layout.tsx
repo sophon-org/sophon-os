@@ -52,14 +52,22 @@ export default function RootLayout(
 		<html
 			lang={'en'}
 			className={'bg-white'}>
-			<body className={`${altehaasGrotesk.variable} relative flex flex-col antialiased`}>
-				<main
-					className={'min-w-screen relative z-0 min-h-screen'}
+			<body
+				style={{
+					background: 'linear-gradient(180deg, #5CABE6 0%, #8EDCFF 100%)'
+				}}
+				className={`${altehaasGrotesk.variable} relative flex flex-col antialiased`}>
+				<div
+					className={'pointer-events-none fixed inset-0 z-0 h-screen w-screen'}
 					style={{
-						background: 'linear-gradient(180deg, #5CABE6 0%, #8EDCFF 100%)'
-					}}>
-					{children}
-				</main>
+						backgroundImage: 'url(/noise.png)',
+						backgroundRepeat: 'repeat',
+						backgroundSize: '110px',
+						backgroundPosition: 'center',
+						backgroundBlendMode: 'overlay'
+					}}
+				/>
+				<main className={'min-w-screen relative z-0 min-h-screen'}>{children}</main>
 			</body>
 		</html>
 	);
