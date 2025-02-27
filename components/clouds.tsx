@@ -64,7 +64,7 @@ const DISTRIBUTION_CONFIG = {
 	maxCloudCount: 4, // Maximum number of cloud bases
 	cloudCountDivisor: 200, // Cloud count = viewport width / this value (clamped)
 	minLayerCount: 3, // Minimum number of layers per cloud
-	maxLayerCount: 7, // Maximum number of layers per cloud
+	maxLayerCount: 6, // Maximum number of layers per cloud
 	layerCountDivisor: 300, // Base layer count = viewport width / this value (clamped)
 	ySpreadFactor: 1, // Y position spread = world height * this factor
 	zSpreadFactor: 0.4, // Z position spread = world depth * this factor

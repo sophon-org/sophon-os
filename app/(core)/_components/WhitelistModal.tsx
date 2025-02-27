@@ -128,7 +128,7 @@ export function WhitelistModal(): ReactElement {
 			<button
 				id={'trigger-whitelist-modal'}
 				onClick={handleOpen}
-				className={'pointer-events-none invisible absolute size-0'}>
+				className={'pointer-events-none invisible absolute hidden size-0'}>
 				{'Join Waitlist'}
 			</button>
 		</Fragment>

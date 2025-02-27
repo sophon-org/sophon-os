@@ -1,5 +1,3 @@
-import {Fragment} from 'react';
-
 import {Logo} from '@/components/logo';
 import {cn} from '@/lib/utils';
 
@@ -7,7 +5,7 @@ import type {ReactElement} from 'react';
 
 export function MainHero(): ReactElement {
 	return (
-		<Fragment>
+		<div className={'flex flex-col items-center justify-center'}>
 			<Logo className={'mb-10 text-white'} />
 			<h1
 				className={cn(
@@ -16,8 +14,16 @@ export function MainHero(): ReactElement {
 					'text-[48px] leading-[48px]',
 					'md:whitespace-break-spaces'
 				)}>
-				{'A Breath\nof Fresh Air'}
+				{'Sophon OS'}
 			</h1>
+			<p
+				className={cn(
+					'mx-auto text-white pt-6',
+					'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
+					'text-[16px] leading-[18px] tracking-[-0.02em]'
+				)}>
+				{'[v 0.1]'}
+			</p>
 			<p
 				className={cn(
 					'mx-auto text-white pt-6',
@@ -25,16 +31,18 @@ export function MainHero(): ReactElement {
 					'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
 					'text-[16px] leading-[18px] tracking-[-0.02em]'
 				)}>
-				{'Sophon is taking crypto to consumers by making it intuitive, familiar, and value-adding to all.'}
+				{
+					'Powering the next generation of consumer apps with crypto.  Making everyday digital lifestyle experiences more valuable, more connected, and more rewarding.'
+				}
 			</p>
 
 			<div className={'pt-10 max-md:w-full'}>
 				<button
 					onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}
-					className={'button-glass max-md:w-full'}>
+					className={'button-regular max-md:w-full'}>
 					{'Join Waitlist'}
 				</button>
 			</div>
-		</Fragment>
+		</div>
 	);
 }
