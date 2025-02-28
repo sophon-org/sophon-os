@@ -18,7 +18,6 @@ import type {ReactElement} from 'react';
  ** - Sequential transition: Splash fades 80% before Main appears
  ** - Responsive design for different screen sizes
  *****************************************************************************************/
-
 export default function Splash(): ReactElement {
 	const [shouldSplashOut, setShouldSplashOut] = useState(false);
 	const [blurAmount, setBlurAmount] = useState(0);
