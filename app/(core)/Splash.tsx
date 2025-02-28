@@ -80,7 +80,7 @@ export default function Splash(): ReactElement {
 					'text-[48px] leading-[48px]',
 					'whitespace-break-spaces uppercase'
 				)}>
-				{'Sophon OS'}
+				{'Ready for a breath\nof fresh air?'}
 			</h1>
 			<div className={'pt-6'}>
 				<button
