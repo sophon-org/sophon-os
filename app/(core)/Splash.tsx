@@ -30,6 +30,7 @@ export default function Splash(): ReactElement {
 		setFadeProgress(100);
 		setTimeout(() => {
 			setShouldSplashOut(true);
+			window.scrollTo({top: 0, behavior: 'smooth'});
 		}, 300);
 	};
 
