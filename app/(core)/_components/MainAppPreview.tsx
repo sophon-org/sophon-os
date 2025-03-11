@@ -1,36 +1,12 @@
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 
-import Badge from '@/components/badge';
-import {cn} from '@/lib/utils';
-
 import type {ReactElement} from 'react';
-
-const apps = {
-	sophonHome: {
-		title: 'Sophon Home',
-		pearl: '/sophonHome/pearl.png',
-		description:
-			'Your gateway to the Sophon Ecosystem. Discover apps and build up your profile and reputation across the value layer of the internet.'
-	},
-	sophonAccount: {
-		title: 'Sophon Account',
-		pearl: '/sophonAccount/pearl.png',
-		description:
-			'A smart contract-based account system that lets you use crypto as easily as any other digital service. Sign in with familiar methods, set your own security rules, and never worry about losing access.'
-	},
-	sophonPlus: {
-		title: 'Sophon+',
-		pearl: '/sophonAccount/pearl.png',
-		description:
-			'Loyalty reimagined. Get rewarded for your achievements - both online & onchain. Exchange your collected points for a range of rewards & tangible benefits.'
-	}
-};
 
 export function MainAppPreview(): ReactElement {
 	return (
-		<div className={'relative mt-20 grid max-w-[1200px] gap-20 md:grid-cols-3 md:gap-8 md:px-11 md:pt-16'}>
-			<div className={'hidden flex-col justify-between gap-4 md:flex md:gap-16 md:py-[104px]'}>
+		<div className={'relative mt-20 grid max-w-[1200px] gap-20 lg:grid-cols-3 lg:gap-8 lg:px-11 lg:pt-16'}>
+			<div className={'hidden flex-col gap-4 lg:flex lg:gap-8'}>
 				<motion.div
 					animate={{y: [0, -15, 0]}}
 					transition={{
@@ -39,22 +15,19 @@ export function MainAppPreview(): ReactElement {
 						repeatType: 'reverse',
 						ease: 'easeInOut'
 					}}
-					className={'flex flex-col items-center text-center transition-all duration-300'}>
-					<div className={'pb-6'}>
-						<Badge
-							title={apps.sophonHome.title}
-							pearl={apps.sophonHome.pearl}
+					className={'transition-all duration-300'}>
+					<div className={'relative overflow-hidden rounded-[32px]'}>
+						<Image
+							src={'/appPreview/topApps.png'}
+							alt={'User profile'}
+							quality={90}
+							className={
+								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+							}
+							width={344}
+							height={266}
 						/>
 					</div>
-					<p
-						className={cn(
-							'text-white',
-							'max-w-[368px] md:max-w-[800px] md:whitespace-break-spaces',
-							'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
-							'text-[16px] leading-[18px] tracking-[-0.02em]'
-						)}>
-						{apps.sophonHome.description}
-					</p>
 				</motion.div>
 				<motion.div
 					animate={{y: [0, -10, 0]}}
@@ -64,22 +37,41 @@ export function MainAppPreview(): ReactElement {
 						repeatType: 'reverse',
 						ease: 'easeInOut'
 					}}
-					className={'flex flex-col items-center text-center transition-all duration-300'}>
-					<div className={'pb-6'}>
-						<Badge
-							title={apps.sophonAccount.title}
-							pearl={apps.sophonAccount.pearl}
+					className={'transition-all duration-300 '}>
+					<div className={'relative translate-x-[-100px] overflow-hidden rounded-[32px]'}>
+						<Image
+							src={'/appPreview/sophon+.png'}
+							alt={'Top apps'}
+							quality={90}
+							className={
+								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+							}
+							width={344}
+							height={203}
 						/>
 					</div>
-					<p
-						className={cn(
-							'text-white',
-							'max-w-[368px] md:max-w-[800px] md:whitespace-break-spaces',
-							'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
-							'text-[16px] leading-[18px] tracking-[-0.02em]'
-						)}>
-						{apps.sophonAccount.description}
-					</p>
+				</motion.div>
+				<motion.div
+					animate={{y: [0, -10, 0]}}
+					transition={{
+						duration: 5,
+						repeat: Infinity,
+						repeatType: 'reverse',
+						ease: 'easeInOut'
+					}}
+					className={'transition-all duration-300'}>
+					<div className={'relative overflow-hidden rounded-[32px]'}>
+						<Image
+							src={'/appPreview/ecosystem.png'}
+							alt={'Top apps'}
+							quality={90}
+							className={
+								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+							}
+							width={344}
+							height={175}
+						/>
+					</div>
 				</motion.div>
 			</div>
 
@@ -91,43 +83,92 @@ export function MainAppPreview(): ReactElement {
 					repeatType: 'reverse',
 					ease: 'easeInOut'
 				}}
-				className={'relative z-10 flex items-end transition-all duration-300'}>
+				className={'relative z-10 flex items-start transition-all duration-300'}>
 				<Image
 					src={'/mock.png'}
 					alt={'Phone'}
 					quality={90}
 					className={'transition-all duration-700 hover:scale-[102%]'}
-					width={373}
-					height={436}
+					width={368}
+					height={732}
 				/>
 			</motion.div>
 
-			<div className={'flex flex-col items-center justify-center gap-20 md:gap-0'}>
-				<motion.div
-					animate={{y: [0, -15, 0]}}
-					transition={{
-						duration: 4,
-						repeat: Infinity,
-						repeatType: 'reverse',
-						ease: 'easeInOut'
-					}}
-					className={'flex flex-col items-center text-center transition-all duration-300 md:hidden'}>
-					<div className={'pb-6'}>
-						<Badge
-							title={apps.sophonHome.title}
-							pearl={apps.sophonHome.pearl}
-						/>
-					</div>
-					<p
-						className={cn(
-							'text-white',
-							'max-w-[368px] md:max-w-[800px] md:whitespace-break-spaces',
-							'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
-							'text-[16px] leading-[18px] tracking-[-0.02em]'
-						)}>
-						{apps.sophonHome.description}
-					</p>
-				</motion.div>
+			<div className={'hidden flex-col gap-4 md:gap-8 lg:flex'}>
+				<div className={'flex h-[400px] flex-col gap-4'}>
+					<motion.div
+						animate={{y: [0, -15, 0]}}
+						transition={{
+							duration: 4,
+							repeat: Infinity,
+							repeatType: 'reverse',
+							ease: 'easeInOut'
+						}}
+						className={'transition-all duration-300'}>
+						<div className={'relative overflow-hidden rounded-[32px]'}>
+							<Image
+								src={'/appPreview/profile.png'}
+								alt={'User profile'}
+								quality={90}
+								className={
+									'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+								}
+								width={344}
+								height={178}
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						animate={{y: [0, -10, 0]}}
+						transition={{
+							duration: 5,
+							repeat: Infinity,
+							repeatType: 'reverse',
+							ease: 'easeInOut'
+						}}
+						className={'transition-all duration-300'}>
+						<div
+							className={
+								'relative translate-x-[100px] translate-y-[-100px] overflow-hidden rounded-[32px]'
+							}>
+							<Image
+								src={'/appPreview/tweet.png'}
+								alt={'Top apps'}
+								quality={90}
+								className={
+									'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+								}
+								width={344}
+								height={120}
+							/>
+						</div>
+					</motion.div>
+					<motion.div
+						animate={{y: [0, -10, 0]}}
+						transition={{
+							duration: 5,
+							repeat: Infinity,
+							repeatType: 'reverse',
+							ease: 'easeInOut'
+						}}
+						className={'transition-all duration-300'}>
+						<div
+							className={
+								'relative translate-x-[44px] translate-y-[-140px] overflow-hidden rounded-[32px]'
+							}>
+							<Image
+								src={'/appPreview/followers.png'}
+								alt={'Top apps'}
+								quality={90}
+								className={
+									'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+								}
+								width={344}
+								height={88}
+							/>
+						</div>
+					</motion.div>
+				</div>
 				<motion.div
 					animate={{y: [0, -10, 0]}}
 					transition={{
@@ -136,48 +177,19 @@ export function MainAppPreview(): ReactElement {
 						repeatType: 'reverse',
 						ease: 'easeInOut'
 					}}
-					className={'flex flex-col items-center text-center transition-all duration-300 md:hidden'}>
-					<div className={'pb-6'}>
-						<Badge
-							title={apps.sophonAccount.title}
-							pearl={apps.sophonAccount.pearl}
+					className={'transition-all duration-300'}>
+					<div className={'relative overflow-hidden rounded-[32px]'}>
+						<Image
+							src={'/appPreview/section_auth.png'}
+							alt={'Top apps'}
+							quality={90}
+							className={
+								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+							}
+							width={320}
+							height={264}
 						/>
 					</div>
-					<p
-						className={cn(
-							'text-white',
-							'max-w-[368px] md:max-w-[800px] md:whitespace-break-spaces',
-							'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
-							'text-[16px] leading-[18px] tracking-[-0.02em]'
-						)}>
-						{apps.sophonAccount.description}
-					</p>
-				</motion.div>
-
-				<motion.div
-					animate={{y: [0, -12, 0]}}
-					transition={{
-						duration: 4.5,
-						repeat: Infinity,
-						repeatType: 'reverse',
-						ease: 'easeInOut'
-					}}
-					className={'flex flex-col items-center text-center transition-all duration-300'}>
-					<div className={'pb-6'}>
-						<Badge
-							title={apps.sophonPlus.title}
-							pearl={apps.sophonPlus.pearl}
-						/>
-					</div>
-					<p
-						className={cn(
-							'text-white',
-							'max-w-[368px] md:max-w-[800px] md:whitespace-break-spaces',
-							'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
-							'text-[16px] leading-[18px] tracking-[-0.02em]'
-						)}>
-						{apps.sophonPlus.description}
-					</p>
 				</motion.div>
 			</div>
 		</div>

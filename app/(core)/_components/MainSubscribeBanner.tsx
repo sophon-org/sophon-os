@@ -8,8 +8,7 @@ import type {ReactElement} from 'react';
 export function MainSubscribeBanner(): ReactElement {
 	return (
 		<Fragment>
-			<div
-				className={'relative z-[60] mt-[200px] aspect-[1200/560] w-full max-w-[1200px] max-md:hidden md:mt-60'}>
+			<div className={'relative z-[60] mt-32 hidden aspect-[1200/560] w-full max-w-[1200px] md:flex'}>
 				<div className={'flex size-full flex-col items-center justify-center gap-10'}>
 					<h3
 						className={cn(
@@ -84,7 +83,7 @@ export function MainSubscribeBanner(): ReactElement {
 					</div>
 				</div>
 			</div>
-			<div className={'relative mt-[200px] aspect-[1200/560] w-full max-w-[1200px] md:mt-60 md:hidden'}>
+			<div className={'relative mt-32 aspect-[1200/560] w-full max-w-[1200px] md:mt-60 md:hidden'}>
 				<div className={'flex size-full flex-col items-center justify-center gap-10'}>
 					<h3
 						className={cn(
@@ -93,7 +92,11 @@ export function MainSubscribeBanner(): ReactElement {
 							'text-[48px] leading-[48px]',
 							'md:whitespace-break-spaces text-center'
 						)}>
-						{'Subscribe for early access\nto Sophon OS'}
+						{'Subscribe for'}
+						<br />
+						{'early access to'}
+						<br />
+						{'Sophon OS'}
 					</h3>
 					<div className={'w-full'}>
 						<button
@@ -102,6 +105,40 @@ export function MainSubscribeBanner(): ReactElement {
 							{'Join Waitlist'}
 						</button>
 					</div>
+				</div>
+				<div className={'relative z-20 h-[250px]'}>
+					<Image
+						className={'absolute left-[-20%] top-0'}
+						src={'/pearlBanners/middleLeft.png'}
+						alt={'pearl'}
+						quality={90}
+						width={104}
+						height={104}
+					/>
+					<Image
+						src={'/pearlBanners/topRight.png'}
+						alt={'pearl'}
+						className={'absolute left-[15%] top-[35%]'}
+						quality={90}
+						width={65}
+						height={65}
+					/>
+					<Image
+						src={'/pearlBanners/middleRight.png'}
+						alt={'pearl'}
+						className={'absolute right-[20%] top-[20%]'}
+						quality={90}
+						width={80}
+						height={80}
+					/>
+					<Image
+						src={'/pearlBanners/topLeft.png'}
+						alt={'pearl'}
+						className={'absolute -top-1/4 right-[-20%]'}
+						quality={90}
+						width={90}
+						height={90}
+					/>
 				</div>
 			</div>
 		</Fragment>

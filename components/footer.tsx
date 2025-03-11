@@ -9,7 +9,7 @@ import type {ReactElement} from 'react';
 
 export default function Footer(): ReactElement {
 	return (
-		<footer className={'z-50 mt-[200px] w-screen px-0 pt-32  md:mt-[46px] 2xl:mt-[300px]'}>
+		<footer className={'z-10 mt-[250px] w-screen px-0 pt-32 2xl:mt-[100px]'}>
 			<div className={'relative bg-white px-4'}>
 				<div className={'relative z-20 mx-auto flex max-w-[1200px] flex-wrap gap-x-16 pt-20 lg:gap-x-[78px]'}>
 					<div className={'grid grid-cols-2 gap-10 md:grid-cols-4'}>
@@ -150,7 +150,10 @@ export default function Footer(): ReactElement {
 					</div>
 				</div>
 				<div className={cn('pointer-events-none absolute inset-x-0 z-10 overflow-x-clip')}>
-					<div className={'absolute bottom-20 left-[-63.17%] h-[1030px] w-[1960px]'}>
+					<div
+						className={
+							'absolute bottom-20 left-[-63.17%] h-[1030px] w-[1960px] 2xl:left-[-40%] 3xl:left-[-20%] 4xl:left-[-10%]'
+						}>
 						<Image
 							src={'/bigLeftCloud.png?v=2'}
 							alt={''}
@@ -159,7 +162,10 @@ export default function Footer(): ReactElement {
 							height={1030}
 						/>
 					</div>
-					<div className={'absolute bottom-20 right-[-51.24%] h-[1005px] w-[2024px]'}>
+					<div
+						className={
+							'absolute bottom-20 right-[-51.24%] h-[1005px] w-[2024px] 2xl:right-[-30%] 3xl:right-[-20%] 4xl:right-[-10%]'
+						}>
 						<Image
 							src={'/bigRightCloud.png?v=2'}
 							alt={''}

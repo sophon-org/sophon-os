@@ -27,12 +27,12 @@ export function MainHero(): ReactElement {
 			<p
 				className={cn(
 					'mx-auto text-white pt-6',
-					'max-w-[300px] md:max-w-[560px] md:whitespace-break-spaces',
+					'max-w-[300px] md:max-w-[580px] md:whitespace-break-spaces',
 					'md:text-[20px] md:leading-[24px] md:tracking-[-0.02em]',
 					'text-[16px] leading-[18px] tracking-[-0.02em]'
 				)}>
 				{
-					'Powering the next generation of consumer apps with crypto.  Making everyday digital lifestyle experiences more valuable, more connected, and more rewarding.'
+					'The operating system for crypto-powered consumer applications. Making everyday digital lifestyle experiences more valuable, more connected, and more rewarding.'
 				}
 			</p>
 
