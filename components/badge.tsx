@@ -19,7 +19,7 @@ export default function Badge({
 				style={{
 					boxShadow: '0px 0px 16px 0px #FFFFFFCC inset'
 				}}
-				className={cn('bg-white pl-2 py-2 pr-3.5 rounded-full', 'flex flex-row gap-2 items-center', className)}>
+				className={cn('bg-white p-3 pr-4 rounded-full', 'flex flex-row gap-2 items-center', className)}>
 				<Image
 					src={pearl}
 					quality={100}

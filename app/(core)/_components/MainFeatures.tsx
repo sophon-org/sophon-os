@@ -78,7 +78,7 @@ export function MainFeatures(): ReactElement {
 				<div className={'h-px w-full bg-white'} />
 				<PlusIcon className={'size-5 text-white'} />
 			</div>
-			<section className={'z-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2'}>
+			<section className={'z-10 grid w-full grid-cols-1 gap-4 md:grid-cols-2'}>
 				<FeatureTile {...apps.sophonHome} />
 				<FeatureTile {...apps.sophonAccount} />
 				<FeatureTile {...apps.sophonPlus} />
@@ -102,7 +102,7 @@ function FeatureTile({title, badge, description, isTransparent = false}: TFeatur
 	return (
 		<div
 			className={cn(
-				'relative p-6 rounded-xl text-white border-white/60',
+				'relative p-6 rounded-3xl text-white border-white/60',
 				'flex flex-col h-full text-left',
 				isTransparent
 					? 'bg-transparent dashed-border'
