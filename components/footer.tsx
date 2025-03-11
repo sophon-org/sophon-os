@@ -159,19 +159,19 @@ export default function Footer(): ReactElement {
 							alt={''}
 							quality={90}
 							width={1960}
-							height={1030}
+							height={1005}
 						/>
 					</div>
 					<div
 						className={
-							'absolute bottom-20 right-[-51.24%] h-[1005px] w-[2024px] 2xl:right-[-30%] 3xl:right-[-20%] 4xl:right-[-10%]'
+							'absolute bottom-20 right-[-51.24%] h-[993px] w-[2024px] 2xl:right-[-30%] 3xl:right-[-20%] 4xl:right-[-10%]'
 						}>
 						<Image
 							src={'/bigRightCloud.png?v=2'}
 							alt={''}
 							quality={90}
 							width={2024}
-							height={1005}
+							height={1000}
 						/>
 					</div>
 				</div>
