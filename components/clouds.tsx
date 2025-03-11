@@ -53,9 +53,11 @@ const MOVEMENT_CONFIG = {
 	sizeAdjustmentFactor: 0.2, // How much size affects wind speed
 	windSpeedMinFactor: 0.4, // Minimum wind speed = adjusted speed * this factor
 	windSpeedMaxFactor: 1.8, // Maximum wind speed = adjusted speed * this factor
-	minRotationSpeed: 0.01, // Minimum rotation speed
-	maxRotationSpeed: 0.2, // Maximum rotation speed
-	rotationSizeAdjustmentFactor: 0.05 // How much size affects rotation speed
+	minRotationSpeed: 0, // Minimum rotation speed - set to 0 to disable rotation
+	maxRotationSpeed: 0, // Maximum rotation speed - set to 0 to disable rotation
+	rotationSizeAdjustmentFactor: 0.05, // How much size affects rotation speed
+	verticalDriftFactor: 0.02, // Factor for subtle vertical movement
+	verticalDriftSpeed: 0.1 // Speed of vertical drift
 };
 
 // Cloud distribution configuration
@@ -100,6 +102,8 @@ type TCloudLayer = {
 	s: number;
 	speed: number;
 	windSpeed: number;
+	verticalDrift?: number;
+	verticalDriftSpeed?: number;
 };
 
 type TCloudTexture = {
@@ -282,10 +286,14 @@ function CloudsComponent(): ReactElement {
 				a,
 				s,
 				// Varied rotation speeds - inversely proportional to size
-				speed:
-					randomBetween(MOVEMENT_CONFIG.minRotationSpeed, MOVEMENT_CONFIG.maxRotationSpeed) *
-					(1 - s * MOVEMENT_CONFIG.rotationSizeAdjustmentFactor),
-				windSpeed
+				// speed:
+				// 	randomBetween(MOVEMENT_CONFIG.minRotationSpeed, MOVEMENT_CONFIG.maxRotationSpeed) *
+				// 	(1 - s * MOVEMENT_CONFIG.rotationSizeAdjustmentFactor),
+				speed: 0,
+				windSpeed,
+				// Add vertical drift parameters
+				verticalDrift: randomBetween(-1, 1),
+				verticalDriftSpeed: randomBetween(0.05, 0.15)
 			};
 
 			const cloudTransform = `translateX(${cloud.data.x}px) translateY(${cloud.data.y}px) translateZ(${cloud.data.z}px) rotateZ(${a}deg) scale(${s})`;
@@ -349,8 +357,17 @@ function CloudsComponent(): ReactElement {
 
 	useAnimationFrame(() => {
 		layers.forEach(layer => {
+			// Horizontal movement (wind)
 			layer.data.x += layer.data.windSpeed;
-			layer.data.a += layer.data.speed;
+
+			// Subtle vertical drift
+			if (layer.data.verticalDrift !== undefined && layer.data.verticalDriftSpeed !== undefined) {
+				layer.data.y +=
+					Math.sin(Date.now() * 0.001 * layer.data.verticalDriftSpeed) *
+					MOVEMENT_CONFIG.verticalDriftFactor *
+					layer.data.verticalDrift;
+			}
+
 			const layerRect = layer.getBoundingClientRect();
 			const layerX = layerRect.left;
 
@@ -358,6 +375,10 @@ function CloudsComponent(): ReactElement {
 				layer.data.x = -worldBounds.width + Math.random() * (worldBounds.width * 0.3);
 				layer.data.y = randomBetween(-worldBounds.height, worldBounds.height);
 				layer.data.z = randomBetween(-worldBounds.depth / 2, worldBounds.depth / 2);
+				// Reset vertical drift parameters when recycling
+				if (layer.data.verticalDrift !== undefined) {
+					layer.data.verticalDrift = randomBetween(-1, 1);
+				}
 			}
 
 			const transform = `translateX(${layer.data.x}px) translateY(${layer.data.y}px) translateZ(${
