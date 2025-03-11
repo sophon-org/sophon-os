@@ -28,7 +28,7 @@ export default function Main(): ReactElement {
 					height: 'calc(100% - 200px)'
 				}}
 				className={
-					'max-w-dvw relative z-50 flex flex-col items-center overflow-x-hidden pt-20 text-center max-md:px-6'
+					'max-w-dvw relative z-50 flex flex-col items-center overflow-hidden pt-20 text-center max-md:px-6'
 				}>
 				<MainHero />
 				<MainAppPreview />
