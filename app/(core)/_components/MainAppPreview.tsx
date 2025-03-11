@@ -39,16 +39,18 @@ export function MainAppPreview(): ReactElement {
 					}}
 					className={'transition-all duration-300 '}>
 					<div className={'relative translate-x-[-100px] overflow-hidden rounded-[32px]'}>
-						<Image
-							src={'/appPreview/sophon+.png'}
-							alt={'Top apps'}
-							quality={90}
-							className={
-								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
-							}
-							width={344}
-							height={203}
-						/>
+						<button onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}>
+							<Image
+								src={'/appPreview/sophon+.png'}
+								alt={'Sophon+'}
+								quality={90}
+								className={
+									'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
+								}
+								width={344}
+								height={203}
+							/>
+						</button>
 					</div>
 				</motion.div>
 				<motion.div
@@ -63,7 +65,7 @@ export function MainAppPreview(): ReactElement {
 					<div className={'relative overflow-hidden rounded-[32px]'}>
 						<Image
 							src={'/appPreview/ecosystem.png'}
-							alt={'Top apps'}
+							alt={'Ecosystem'}
 							quality={90}
 							className={
 								'rounded-[32px] border-8 border-white/40 transition-all duration-700 hover:scale-[102%]'
@@ -84,14 +86,16 @@ export function MainAppPreview(): ReactElement {
 					ease: 'easeInOut'
 				}}
 				className={'relative z-10 flex items-start transition-all duration-300'}>
-				<Image
-					src={'/mock.png'}
-					alt={'Phone'}
-					quality={90}
-					className={'transition-all duration-700 hover:scale-[102%]'}
-					width={368}
-					height={732}
-				/>
+				<button onClick={() => document?.getElementById('trigger-whitelist-modal')?.click()}>
+					<Image
+						src={'/mock.png'}
+						alt={'Phone'}
+						quality={90}
+						className={'transition-all duration-700 hover:scale-[102%]'}
+						width={368}
+						height={732}
+					/>
+				</button>
 			</motion.div>
 
 			<div className={'hidden flex-col gap-4 md:gap-8 lg:flex'}>
