@@ -8,7 +8,9 @@ import type {ReactElement} from 'react';
 export function MainSubscribeBanner(): ReactElement {
 	return (
 		<Fragment>
-			<div className={'relative z-[60] mt-32 hidden aspect-[1200/560] w-full max-w-[1200px] md:flex'}>
+			<div
+				className={'relative z-[60] mt-32 hidden aspect-[1200/560] w-full max-w-[1200px] md:flex'}
+				style={{marginTop: '128px'}}>
 				<div className={'flex size-full flex-col items-center justify-center gap-10'}>
 					<h3
 						className={cn(
@@ -84,7 +86,7 @@ export function MainSubscribeBanner(): ReactElement {
 				</div>
 			</div>
 			<div className={'relative mt-32 aspect-[1200/560] w-full max-w-[1200px] md:mt-60 md:hidden'}>
-				<div className={'flex size-full flex-col items-center justify-center gap-10'}>
+				<div className={'flex size-full min-h-[420px] flex-col items-center justify-center gap-10'}>
 					<h3
 						className={cn(
 							'font-normal -tracking-wider text-white',

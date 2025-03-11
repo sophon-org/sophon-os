@@ -152,7 +152,7 @@ export default function Footer(): ReactElement {
 				<div className={cn('pointer-events-none absolute inset-x-0 z-10 overflow-x-clip')}>
 					<div
 						className={
-							'absolute bottom-20 left-[-63.17%] h-[1030px] w-[1960px] 2xl:left-[-40%] 3xl:left-[-20%] 4xl:left-[-10%]'
+							'absolute bottom-20 left-[-63.17%] h-[1005px] w-[1960px] 2xl:left-[-40%] 3xl:left-[-20%] 4xl:left-[-10%]'
 						}>
 						<Image
 							src={'/bigLeftCloud.png?v=2'}
