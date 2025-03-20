@@ -44,6 +44,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 			return NextResponse.json({error: 'Please enter a valid email address'}, {status: 400});
 		}
 
+		console.log('Adding email to Brevo', email);
+
 		// Add the email to the Notion database
 		const response = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
 			method: 'POST',
@@ -58,6 +60,8 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 				redirectionUrl: `${URL}/?modal=whitelist&step=success`
 			})
 		});
+
+		console.log('Response', response);
 
 		const result = await response.json();
 
