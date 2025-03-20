@@ -63,14 +63,17 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
 		console.log('Response', response);
 
-		const result = await response.json();
-
-		if (!response.ok) {
-			console.error('Brevo API error:', result);
-			return NextResponse.json(
-				{error: 'Failed to add email to Brevo', details: result},
-				{status: response.status}
-			);
+		try {
+			if (!response.ok) {
+				const result = await response.json();
+				console.error('Brevo API error:', result);
+				return NextResponse.json(
+					{error: 'Failed to add email to Brevo', details: result},
+					{status: response.status}
+				);
+			}
+		} catch (error) {
+			console.error('Error parsing response:', error);
 		}
 
 		return NextResponse.json({success: true, message: 'Email added to Brevo'}, {status: 201});
