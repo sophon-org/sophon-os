@@ -12,6 +12,16 @@ import {useTransitionStore} from '@/lib/transition-store';
 
 import type {ReactElement} from 'react';
 
+/************************************************************************************************
+ ** Main Component
+ ** Primary content container that appears after splash screen or directly with modal
+ ** Features:
+ ** - Coordinated transitions with Splash component
+ ** - Immediate visibility when modal parameters are present
+ ** - Smooth blur transitions
+ ** - Contains all main content sections and whitelist modal
+ ************************************************************************************************/
+
 export default function Main(): ReactElement {
 	const {isMainVisible, mainBlurAmount} = useTransitionStore();
 
