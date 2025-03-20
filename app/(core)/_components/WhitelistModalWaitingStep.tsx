@@ -1,4 +1,6 @@
-import Lottie from 'lottie-react';
+'use client';
+
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import {Fragment} from 'react';
 
@@ -7,6 +9,8 @@ import {cn} from '@/lib/utils';
 import lottieSuccess from '../../../public/confirmationBadge.json';
 
 import type {ReactElement} from 'react';
+
+const Lottie = dynamic(async () => import('lottie-react'), {ssr: false});
 
 /************************************************************************************************
  ** WhitelistModalWaitingStep Component

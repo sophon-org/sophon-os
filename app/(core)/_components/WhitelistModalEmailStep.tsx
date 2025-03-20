@@ -38,7 +38,7 @@ export function WhitelistModalEmailStep(props: {
 			return;
 		}
 
-		const isSubmitSuccessful = await submitToNotion(email);
+		const isSubmitSuccessful = await sumbitToBrevo(email);
 
 		if (isSubmitSuccessful) {
 			await handleEmailSubmit(event);
@@ -47,9 +47,9 @@ export function WhitelistModalEmailStep(props: {
 		setIsSubmitting(false);
 	}
 
-	const submitToNotion = async (email: string): Promise<boolean> => {
+	const sumbitToBrevo = async (email: string): Promise<boolean> => {
 		try {
-			const response = await fetch('/api/notion', {
+			const response = await fetch('/api/brevo', {
 				method: 'POST',
 				headers: {
 					// eslint-disable-next-line @typescript-eslint/naming-convention
