@@ -1,5 +1,6 @@
 'use client';
 import {motion} from 'framer-motion';
+import {useSearchParams} from 'next/navigation';
 import {useEffect, useState} from 'react';
 
 import {Logo} from '@/components/logo';
@@ -16,13 +17,31 @@ import type {ReactElement} from 'react';
  ** - Smooth opacity and blur animations
  ** - Coordinates with Main component for seamless transitions
  ** - Sequential transition: Splash fades 80% before Main appears
+ ** - Skips splash screen when modal query parameters are present
  ** - Responsive design for different screen sizes
  *****************************************************************************************/
 export default function Splash(): ReactElement {
+	const searchParams = useSearchParams();
 	const [shouldSplashOut, setShouldSplashOut] = useState(false);
 	const [blurAmount, setBlurAmount] = useState(0);
 	const [fadeProgress, setFadeProgress] = useState(0);
 	const {setMainVisible, setMainBlur} = useTransitionStore();
+
+	// Check for modal query parameters on mount
+	useEffect(() => {
+		const hasModalParam = searchParams.get('modal') === 'whitelist';
+		const hasStepParam = !!searchParams.get('step');
+
+		// Skip splash screen if modal parameters are present
+		if (hasModalParam || hasStepParam) {
+			setBlurAmount(20);
+			setFadeProgress(100);
+			setShouldSplashOut(true);
+			// Make main visible immediately
+			setMainVisible(true);
+			setMainBlur(0);
+		}
+	}, [searchParams, setMainVisible, setMainBlur]);
 
 	// Handle the cloud-like blur effect when button is clicked
 	const handleSplashOut = (): void => {
