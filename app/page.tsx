@@ -1,3 +1,5 @@
+import {Suspense} from 'react';
+
 import {Landing} from '@/app/(core)/Landing';
 
 import type {ReactElement} from 'react';
@@ -12,5 +14,9 @@ import type {ReactElement} from 'react';
  *****************************************************************************************/
 
 export default function Page(): ReactElement {
-	return <Landing />;
+	return (
+		<Suspense>
+			<Landing />
+		</Suspense>
+	);
 }
