@@ -39,7 +39,7 @@ export function WhitelistModalWaitingStep(): ReactElement {
 						'text-[32px] leading-[32px]',
 						'whitespace-break-spaces text-center pb-4'
 					)}>
-					{'Go tou your inbox to confirm your email to claim your badge'}
+					{'Go to your inbox to confirm your email to claim your badge'}
 				</p>
 			</div>
 
