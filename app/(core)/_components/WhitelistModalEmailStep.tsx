@@ -121,7 +121,7 @@ export function WhitelistModalEmailStep(props: {
 					<button
 						disabled={isSubmitting}
 						className={'button-regular relative'}>
-						<span className={isSubmitting ? 'opacity-0' : ''}>{'Claim'} </span>
+						<span className={isSubmitting ? 'opacity-0' : ''}>{'Submit'} </span>
 						{isSubmitting && (
 							<div className={'absolute inset-0 flex items-center justify-center'}>
 								<Spinner className={'size-4 animate-spin'} />

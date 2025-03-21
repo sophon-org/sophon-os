@@ -41,7 +41,9 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 						'text-[14px] leading-[18px]',
 						'whitespace-break-spaces text-center'
 					)}>
-					{"You're on the list! We’ll send you an email with further instructions on how to get your badge."}
+					{
+						"You've joined the waitlist! Keep an eye on your inbox for instructions on claiming your badge as we roll out the full Sophon Experience."
+					}
 				</p>
 				<div className={'mt-10 max-md:w-full'}>
 					<button

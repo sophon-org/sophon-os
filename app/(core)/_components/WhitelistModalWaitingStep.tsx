@@ -39,7 +39,17 @@ export function WhitelistModalWaitingStep(): ReactElement {
 						'text-[32px] leading-[32px]',
 						'whitespace-break-spaces text-center pb-4'
 					)}>
-					{'Go to your inbox to confirm your email to claim your badge'}
+					{'Confirm you email address'}
+				</p>
+				<p
+					className={cn(
+						'font-normal tracking-[-0.03em] text-black/30',
+						'text-[14px] leading-[18px]',
+						'whitespace-break-spaces text-center'
+					)}>
+					{
+						'We sent you a message to confirm your address. This is required to secure your early access badge.'
+					}
 				</p>
 			</div>
 
