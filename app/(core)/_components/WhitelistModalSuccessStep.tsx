@@ -18,14 +18,20 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 		<Fragment>
 			<div className={'flex flex-col items-center px-6 pb-10'}>
 				<div className={'mx-14 size-[200px]'}>
-					<Lottie
-						animationData={lottieSuccess}
-						loop={true}
-						autoplay={true}
-						width={200}
-						height={200}
-						className={'aspect-square size-[200px]'}
-					/>
+					<a
+						href={
+							'https://twitter.com/intent/post?text=I%20just%20claimed%20my%20early%20access%20badge%20to%20the%20full%20%40sophon%20experience!%0A%0AClaim%20yours%20now%3A&url=https%3A%2F%2Fapp.sophon.xyz%2F'
+						}
+						target={'_blank'}>
+						<Lottie
+							animationData={lottieSuccess}
+							loop={true}
+							autoplay={true}
+							width={200}
+							height={200}
+							className={'aspect-square size-[200px]'}
+						/>
+					</a>
 				</div>
 				<p
 					className={cn(
