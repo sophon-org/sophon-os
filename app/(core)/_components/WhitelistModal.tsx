@@ -37,10 +37,6 @@ function ModalContent({handleClose}: {handleClose: () => void}): ReactElement {
 		// When they click that link, they'll be redirected to the success step
 	};
 
-	const handleExploreClick = (): void => {
-		handleClose();
-	};
-
 	return (
 		<motion.div
 			layout
@@ -87,7 +83,7 @@ function ModalContent({handleClose}: {handleClose: () => void}): ReactElement {
 						exit={{opacity: 0, filter: 'blur(20px)'}}
 						transition={{duration: 1}}
 						className={'flex w-full flex-col'}>
-						<WhitelistModalSuccessStep handleExploreClick={handleExploreClick} />
+						<WhitelistModalSuccessStep />
 					</motion.div>
 				)}
 			</AnimatePresence>
