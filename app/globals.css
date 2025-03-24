@@ -26,6 +26,15 @@ body {
 			box-shadow: 0px 0px 16px 0px #ffffffcc inset;
 		}
 	}
+	.button-secondary {
+		@apply bg-white px-5 py-3.5 rounded-full;
+		@apply text-black font-bold text-[16px] leading-[16px] text-center;
+		@apply transition-shadow;
+		box-shadow: 0px 0px 7px 0px #00000033 inset;
+		&:hover {
+			box-shadow: 0px 0px 16px 0px #0000003f inset;
+		}
+	}
 	.button-glass {
 		@apply bg-white/10 px-5 py-3.5 rounded-full;
 		@apply text-white font-bold text-[16px] leading-[16px] text-center;

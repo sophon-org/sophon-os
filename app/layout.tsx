@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 		siteName: 'Sophon OS',
 		images: [
 			{
-				url: 'https://app.sophon.xyz/og.png',
+				url: 'https://app.sophon.xyz/og-image.jpg',
 				width: 1200,
-				height: 600
+				height: 675
 			}
 		],
 		locale: 'en_US',

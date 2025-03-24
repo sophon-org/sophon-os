@@ -46,9 +46,17 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 					}
 				</p>
 				<div className={'mt-10 max-md:w-full'}>
+					<a
+						href={
+							'https://twitter.com/intent/post?text=I%20just%20claimed%20my%20early%20access%20badge%20to%20the%20full%20%40sophon%20experience!%0A%0AClaim%20yours%20now%3A&url=https%3A%2F%2Fapp.sophon.xyz%2F'
+						}
+						target={'_blank'}
+						className={'button-secondary mx-2 max-md:w-full'}>
+						{'Share on X'}
+					</a>
 					<button
 						onClick={handleExploreClick}
-						className={'button-regular max-md:w-full'}>
+						className={'button-regular mx-2 max-md:w-full'}>
 						{'Explore'}
 					</button>
 				</div>
