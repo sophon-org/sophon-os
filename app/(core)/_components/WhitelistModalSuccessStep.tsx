@@ -11,9 +11,7 @@ import type {ReactElement} from 'react';
 
 const Lottie = dynamic(async () => import('lottie-react'), {ssr: false});
 
-export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void}): ReactElement {
-	const {handleExploreClick} = props;
-
+export function WhitelistModalSuccessStep(): ReactElement {
 	return (
 		<Fragment>
 			<div className={'flex flex-col items-center px-6 pb-10'}>
@@ -51,7 +49,7 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 						"You've joined the waitlist! Keep an eye on your inbox for instructions on claiming your badge as we roll out the full Sophon Experience."
 					}
 				</p>
-				<div className={'mt-10 max-md:w-full'}>
+				<div className={'mt-10 flex justify-center max-md:w-full'}>
 					<a
 						href={
 							'https://twitter.com/intent/post?text=I%20just%20claimed%20my%20early%20access%20badge%20to%20the%20full%20%40sophon%20experience!%0A%0AClaim%20yours%20now%3A&url=https%3A%2F%2Fapp.sophon.xyz%2F'
@@ -60,11 +58,11 @@ export function WhitelistModalSuccessStep(props: {handleExploreClick: () => void
 						className={'button-secondary mx-2 max-md:w-full'}>
 						{'Share on X'}
 					</a>
-					<button
-						onClick={handleExploreClick}
+					<a
+						href={'https://sophon.xyz'}
 						className={'button-regular mx-2 max-md:w-full'}>
 						{'Explore'}
-					</button>
+					</a>
 				</div>
 			</div>
 		</Fragment>
