@@ -39,7 +39,7 @@ export function WhitelistModalWaitingStep(): ReactElement {
 						'text-[32px] leading-[32px]',
 						'whitespace-break-spaces text-center pb-4'
 					)}>
-					{'Confirm you email address'}
+					{'Confirm your email address'}
 				</p>
 				<p
 					className={cn(
