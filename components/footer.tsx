@@ -45,7 +45,7 @@ export default function Footer(): ReactElement {
 								</li>
 								<li>
 									<Link
-										href={'https://discord.gg/sophonhub'}
+										href={'https://discord.gg/sophon'}
 										className={'text-[30px] leading-[30px] tracking-[-0.03em] text-black'}>
 										{'Discord'}
 									</Link>
